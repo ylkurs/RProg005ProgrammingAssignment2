@@ -3,7 +3,7 @@
 
 ## Creates a special "matrix" object that can cache its inverse.
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(mat = matrix()) {
 	matinv <- NULL
 	set <- function(matinput) {
 			mat <<- matinput
@@ -30,8 +30,10 @@ cacheSolve <- function(x, ...) {
 		return(matinv)
 	}
     mat <- x$get()
+	print(mat)
     matinv <- solve(mat, ...)
-    x$setmean(matinv)
+	print(matinv)
+    x$setinv(matinv)
 	## Return a matrix that is the inverse of 'x'
     matinv
 }
