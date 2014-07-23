@@ -32,6 +32,6 @@ cacheSolve <- function(x, ...) {
     mat <- x$get()
     matinv <- solve(mat, ...)
     x$setinv(matinv)
-	## Return a matrix that is the inverse of 'x'
+    ## Return a matrix that is the inverse of 'x'
     matinv
 }
